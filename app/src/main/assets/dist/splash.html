@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero-Storage Splash Screen</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #0f172a;
+            /* Slate 900 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: system-ui, -apple-system, sans-serif;
+            overflow: hidden;
+        }
+
+        .splash-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+            padding: 2rem;
+        }
+
+        .brand-name {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            margin-top: 2rem;
+        }
+
+        .brand-tag {
+            color: #10b981;
+            /* Emerald 500 */
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-top: 0.5rem;
+        }
+
+        /* SVG Animation */
+        .shoe-svg {
+            width: 180px;
+            height: 120px;
+        }
+
+        /* Loading Text Dots */
+        .loading-text {
+            color: #64748b;
+            /* Slate 500 */
+            font-size: 0.9rem;
+            margin-top: 4rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards 0.5s;
+        }
+
+        .dots span {
+            animation: blink 1.4s infinite both;
+            height: 4px;
+            width: 4px;
+            background-color: #64748b;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0.2;
+                transform: scale(0.8);
+            }
+
+            20% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+
+            100% {
+                opacity: 0.2;
+                transform: scale(0.8);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="splash-container">
+        <!-- Static Shoe SVG -->
+        <svg class="shoe-svg" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="16.5" x2="7.5" y1="9.4" y2="4.21"></line>
+            <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+            </path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" x2="12" y1="22.08" y2="12"></line>
+        </svg>
+
+        <!-- Brand Details -->
+        <div class="brand-name">Zero-Storage</div>
+        <div class="brand-tag">Wholesale Hub</div>
+
+        <!-- Loading Indicator -->
+        <div class="loading-text">
+            Preparing Catalog
+            <div class="dots">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
