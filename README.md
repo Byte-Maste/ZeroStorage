@@ -87,3 +87,7 @@ Krishna Choudhary
 ## Repository
 
 https://github.com/Byte-Maste/ZeroStorage
+
+## Shipped APK (Free Download)
+
+https://github.com/Byte-Maste/ZeroStorage/releases/tag/app-demo-v1.0.0
